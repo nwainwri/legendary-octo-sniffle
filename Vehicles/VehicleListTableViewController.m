@@ -114,9 +114,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
+    
     Vehicle *rowVehicle = self.vehicles[indexPath.row];
-    cell.textLabel.text = [rowVehicle description];
+    cell.textLabel.text = [rowVehicle vehicleTitleString];
     return cell;
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Car.h"
 
 //Forward declaration of a class to be imported in the .m file
 @class Vehicle;

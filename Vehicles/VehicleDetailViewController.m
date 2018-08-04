@@ -24,6 +24,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    [self.vehicleDetailsLabel setNumberOfLines:0];
 }
 
 -(void)viewDidLayoutSubviews
@@ -53,9 +54,11 @@
 #pragma mark - Managing the detail item
 - (void)configureView
 {
-    // Update the user interface for the detail item.
+    // Update the user interface for the detail vehicle, if it exists.
     if (self.detailVehicle) {
-        //TODO: Fill this in.
+        //Set the View Controller title, which will display in the Navigation bar.
+        self.title = [self.detailVehicle vehicleTitleString];
+        self.vehicleDetailsLabel.text = [self.detailVehicle vehicleDetailsString];
     }
 }
 
